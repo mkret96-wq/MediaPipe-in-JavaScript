@@ -1,5 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+/* 隐藏标题、说明文字、栏目标题 */
+h1, .column-title, .description {
+  display: none !important;
+}
+/* 去掉分栏边框、间隙，让两个画布铺满或者只保留输出画布 */
+#input_video_div, #output_canvas_div {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* 如果你只想要右边检测后的画面，把左边输入画面隐藏 */
+#input_video_div {
+  display: none !important;
+}
+#output_canvas_div {
+  width:100vw !important;
+  height:100vh !important;
+}
+canvas {
+  width:100% !important;
+  height:100% !important;
+  object-fit: contain;
+}
+</style>
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
